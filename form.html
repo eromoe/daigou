@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=320, initial-scale=1, user-scalable=no, minimum-scale=1" />
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>在线办卡</title>
+
+    <link href="css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="css/mobile.css" rel="stylesheet" type="text/css"/>
+
+
+</head>
+
+<body>
+
+
+    <div class="form">
+        <br><br><br><br>
+        <form class="card-form" method="post" enctype="multipart/form-data">
+            <!-- 卡片类型 金卡 or 白金 1 or 2 -->
+            <input name="tp" type="hidden" >
+
+            <div class="form-line">
+                <label for="">姓名</label>
+                <input name="name" type="text" >
+            </div>
+
+            <div class="form-line">
+                <label for="">手机号</label>
+                <input name="mobile" type="text" >
+            </div>
+
+            <div class="form-line">
+                <label for="">行政区</label>
+                <select name="area">
+                </select>
+            </div>
+
+            <div class="form-line">
+                <label for="">地址</label>
+                <select name="address">
+                </select>
+            </div>
+            <input class="sumbit-btn yellow-btn" type="submit" value="立即申请">
+        </form>
+    </div>
+
+    <script src="js/jquery-1.10.2.min.js" type="text/javascript" ></script>
+    <script type="text/javascript">
+    $(function(){
+        $('.sumbit-btn').click(function(e){
+            e.preventDefault();
+            var mobile = $('input[name="mobile"]').val();
+            if (!mobile||!/^1\d{10}$/.test(mobile)){
+                alert('手机号输入有误！');
+                $('#id_mobile').val('').focus();
+                return;
+            }
+        })
+    })
+    </script>
+
+
+</body>
+</html>

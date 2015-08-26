@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=320, initial-scale=1, user-scalable=no, minimum-scale=1" />
     <meta name="format-detection" content="telephone=no"/>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <title>办卡</title>
+    <title>在线办卡</title>
 
     <link href="css/reset.css" rel="stylesheet" type="text/css"/>
     <link href="css/mobile.css" rel="stylesheet" type="text/css"/>
@@ -14,14 +14,6 @@
     <link href="js/swiper/css/swiper.min.css" rel="stylesheet" type="text/css"/>
     <link href="js/fancybox/jquery.fancybox.css?v=2.1.5" type="text/css" rel="stylesheet"  media="screen" /> 
 -->
-<!--
-    <link href="js/mobiscroll/css/mobiscroll.icons.css" rel="stylesheet" type="text/css" />
-    <link href="js/mobiscroll/css/mobiscroll.widget.css" rel="stylesheet" type="text/css" />
-    <link href="js/mobiscroll/css/mobiscroll.widget.android-holo.css" rel="stylesheet" type="text/css" />
-    <link href="js/mobiscroll/css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
-    <link href="js/mobiscroll/css/mobiscroll.scroller.android-holo.css" rel="stylesheet" type="text/css" />
-    <link href="js/mobiscroll/css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
-!-->
 
     <script type="text/javascript">
         // 読み込む外部ファイル情報
@@ -74,54 +66,154 @@
 
 <body>
 
-    <div class="preload">
+    <div class="preload hide">
         <img src="">
         <p>正在进入...<span cid="percentage"></span></p>
     </div>
 
-    <div class="top-container">
+
+    <div class="front">
+        <br>
+        <br>
+        <a class="btn apply-btn yellow-btn" tp="1" ><img src="img/jinka_03.png">我要申请金卡</a>
+        <br>
+        <a class="btn apply-btn yellow-btn" tp="2" ><img src="img/baij_03.png">我要申请白金卡</a>
+        <a class="help-msg">了解办卡权益<img src="img/wenhao_07.png"></a>
+        <br>
+        <br>
+    </div>
+
+
+    <div class="form hide">
+        <br><br><br><br>
+        <form class="card-form" method="post" enctype="multipart/form-data">
+            <!-- 卡片类型 金卡 or 白金 1 or 2 -->
+            <input name="tp" type="hidden" >
+
+            <div class="form-line">
+                <label for="">姓名</label>
+                <input name="name" type="text" >
+            </div>
+
+            <div class="form-line">
+                <label for="">手机号</label>
+                <input name="mobile" type="text" >
+            </div>
+
+            <div class="form-line">
+                <label for="">行政区</label>
+                <select name="area">
+                </select>
+            </div>
+
+            <div class="form-line">
+                <label for="">地址</label>
+                <select name="address">
+                </select>
+            </div>
+            <input class="sumbit-btn yellow-btn" type="submit" value="立即申请">
+        </form>
+    </div>
+
+    <div class="top-container hide">
 
         <div class="nav">
-            <a class="current" for="#platinum">申请白金卡</a>
-            <a for="#golden">申请金卡</a>
+            <a class="current" tp="1" for="#platinum">白金卡</a>
+            <a for="#golden" tp="1">金卡</a>
         </div>
 
         <div class="main">
 
             <div id="platinum">
+                <h4 class="tc yellow">—————— 活动介绍 ——————</h4>
+                <h2 class="tc yellow fs-18">千元大礼放送冲刺赛</h2>
+                活动时间：<span class="white">2015年11月30日前</span>
+                活动细则：<br>
+                51代购联名卡新增白金卡客户刷卡（累计可计积分交易）达到指定金额范围，<span class="white">即可领取最高价值1888元豪礼</span>：<br>
+                1、刷卡满10000元以上（含10000元），30000元以下，交易成功的前<span class="white">2000</span>名客户可<span class="white">领取价值1188元的CK背包一个</span>。<br>
+                2、刷卡满30000元以上（含30000元），交易成功的前<span class="white">2000</span>名客户可领取<span class="white">价值1888元的外交官尊爵拉杆箱一个</span>。<br>
+                *上述活动商品兑换名额根据活动期间客户累计可计积分交易额从高到低排序，每位客户只可根据交易额领取其中一档商品，先到先得。高交易额客户拥有礼品优先选择权。<br>
+                <img src="img/p1.png">
+
+                <h2 class="tc yellow fs-18">首刷赠礼</h2>
+                活动时间：<span class="white">2015年11月30日前</span>
+                活动细则：<br>
+                51代购联名卡新增白金卡客户刷卡（累计可计积分交易）达到指定金额范围，<span class="white">即可领取最高价值1888元豪礼</span>：<br>
+                1、刷卡满10000元以上（含10000元），30000元以下，交易成功的前<span class="white">2000</span>名客户可<span class="white">领取价值1188元的CK背包一个</span>。<br>
+                2、刷卡满30000元以上（含30000元），交易成功的前<span class="white">2000</span>名客户可领取<span class="white">价值1888元的外交官尊爵拉杆箱一个</span>。<br>
+                *上述活动商品兑换名额根据活动期间客户累计可计积分交易额从高到低排序，每位客户只可根据交易额领取其中一档商品，先到先得。高交易额客户拥有礼品优先选择权。<br>
+
+
+                【补全一下】
+
             </div>
 
             <div id="golden">
+                <h4 class="tc yellow">—————— 活动介绍 ——————</h4>
+                <h2 class="tc yellow fs-18">首刷赠礼</h2>
+                活动细则：<br>
+                <span class="white">金卡：首刷即赠送总价值100元的51代购网（www.51daigou.com）代金券。</span>
+                1、代金券面值分别为：50元一张，20元两张，10元一张。<br>
+                2、完成首刷后，次月光大银行统一发送代金券电子代码至预留手机号。<br>
+                3、每次结算限用一张，可抵扣网站内任意消费。<br>
+                4、代金券有效期至2015年11月30日，以网站内公示为准。<br>
+                *50元面额代金券可参与51代购网“拾走就赚”专区活动，刷卡10元换购以下礼品（每券限购1个）：<br>
+                <img src="img/p2.png">
+
+                <h2 class="tc yellow fs-18">双倍积分</h2>
+                活动细则：<br>
+                非联名卡持卡人在51代购平台（包括但不限于51代购网站、微商城、O2O线下店等）通过银联在线或银联手机支付完成交易后，每消费1元可获赠1点51代购积分；
+                <span class="white">联名卡用户每消费1元可获赠2点51代购积分（1点积分价值0.01元）。</span>
+                *双倍积分具体实现方式以51代购网站内公示为准。
+
+                <h2 class="tc yellow fs-18">刷卡满额换购壕礼</h2>
+                活动时间：<span class="white">2015年10月31日</span>
+                活动细则：<br>
+                51代购联名卡客户登录中国光大银行上海分行微信公众号（shcebbank）指定活动页面报名，填写姓名、手机号、卡号后四位，在活动期间单自然月51代购网上累计交易金额满足条件，次月可在中国光大银行上海分行微信公众号（shcebbank）指定活动页面消费10元领取最高价值4000元的礼品（按交易或分期金额从高至低排序）。
+                （1）每自然月当月在51代购网交易满888元、或账单分期金额满88元，交易额前5000名客户可获10元换购价值30元礼品或对折券机会一次。
+                （2）每自然月当月在51代购网交易满5888元、或账单分期金额满588元，交易额前1000名客户可获10元换购最高价值200元礼品机会一次。
+                （3）每自然月当月在51代购网交易满8888元、或账单分期金额满888元，交易额前50名客户可获10元换购最高价值1000元礼品机会一次。
+                （4）每自然月当月在51代购网交易满18888元、或账单分期金额满1888元，交易额前20名客户可获10元换购最高价值2000元礼品机会一次。
+                （5）每自然月当月在51代购网交易满28888元、或账单分期金额满2888元，交易额前5名客户可获10元换购最高价值4000元礼品机会一次。
+                *4000元神秘大礼详情请见51代购官方网站。
+
+
+                <h2 class="tc yellow fs-18">产品特卖</h2>
+                活动细则：<br>
+                51代购网为联名卡用户提供商品特卖、对折专区、光大专享特卖价格或免分期手续费等礼遇。
+
+
+                <br>
+                <h2 class="tc yellow fs-16">想查询办卡进度？</h2>
+                <p class="yellow">请关注微信公众号“我要购”（微信号：woyaodaigou），并点击左下角标签页【权益中心】-【办卡进度】</p>
+                <br>
+                <img src="img/tip.png">
+                <br>
+                <br>
+                <div class="follow">
+                    海外折扣超市尽在<span class="blue fs-18">我要购</span>
+                    100%正品  低折扣
+                     限时秒杀  日本直邮
+
+                     <img class="qrcode" src="img/qrcode.png">
+                </div>
+                <br>
+
             </div>
 
         </div>
 
         <div class="btm">
-            <a class="apply-btn" href="">立即申请</a>
+            <a class="apply-btn btm-btn yellow-btn" tp="1">我要申请<span class="cname">白金卡</span></a>
         </div>
 
     </div>
 
-    <div class="form-container">
-        
-    <div>
 
     <script src="js/jquery-1.10.2.min.js" type="text/javascript" ></script>
     <script src="js/jquery-migrate-1.2.1.min.js" type="text/javascript" ></script>
     <script src="js/jquery.cookies.js" type="text/javascript" ></script>
     <script src="js/jquery.validate.min.js" type="text/javascript" ></script>
-
-<!--
-    <script src="js/mobiscroll/js/mobiscroll.core.js" type="text/javascript"></script>
-    <script src="js/mobiscroll/js/mobiscroll.widget.js" type="text/javascript"></script>
-    <script src="js/mobiscroll/js/mobiscroll.scroller.js" type="text/javascript"></script>
-
-    <script src="js/mobiscroll/js/mobiscroll.datetime.js" type="text/javascript"></script>
-    <script src="js/mobiscroll/js/mobiscroll.select.js" type="text/javascript"></script>
-
-    <script src="js/mobiscroll/js/mobiscroll.widget.android-holo.js" type="text/javascript"></script>
-    <script src="js/mobiscroll/js/mobiscroll.i18n.zh.js" type="text/javascript"></script>
-!-->
 
 <!-- 
     <script src="js/sweetalert.min.js" type="text/javascript" ></script>
